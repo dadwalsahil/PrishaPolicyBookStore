@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface ModalProps {
   links: { href: string; label: string }[];
@@ -9,11 +9,12 @@ const Modal: React.FC<ModalProps> = ({ show, item, onClose }) => {
   }
   let thumbnail =
     item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.smallThumbnail;
-  return <>
-  <div className="overlay">
+  return (
+    <>
+      <div className="overlay">
         <div className="overlay-inner">
           <button className="close" onClick={onClose}>
-            <i class="fas fa-times"></i>
+            <i className="fas fa-times"></i>
           </button>
           <div className="inner-box">
             <img src={thumbnail} alt="" />
@@ -33,6 +34,7 @@ const Modal: React.FC<ModalProps> = ({ show, item, onClose }) => {
           <h4 className="description">{item.volumeInfo.description}</h4>
         </div>
       </div>
-</>;
+    </>
+  );
 };
 export default Modal;

@@ -56,25 +56,26 @@ function Main({ tabs }: NavbarProps) {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/about">Favourites</NavLink>
+              <NavLink to="/favourites">Favourites</NavLink>
             </li>
           </ul>
         </div>
+        <div className="search">
+          <input
+            type="text"
+            placeholder="Enter Your Book Name"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            onKeyPress={searchBook}
+          />
+          <button>
+            <i className="fas fa-search"></i>
+          </button>
+        </div>
       </nav>
-      <div className="search">
-        <input
-          type="text"
-          placeholder="Enter Your Book Name"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          onKeyPress={searchBook}
-        />
-        <button>
-          <i className="fas fa-search"></i>
-        </button>
-      </div>
+
       <div className="container">{<Card book={bookData} />}</div>
-      <div>
+      <div className="container">
         {books.map((item) => {
           let thumbnail =
             item.volumeInfo.imageLinks &&

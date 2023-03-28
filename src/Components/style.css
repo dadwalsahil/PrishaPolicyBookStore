@@ -5,6 +5,17 @@
     box-sizing: border-box;
     font-family: "", sans-serif;
 }
+html {
+    font-size: 62.5%;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }
 
 :root{
     --primary-color:#fff;
@@ -89,6 +100,10 @@ html{
     grid-template-columns: repeat(auto-fit,minmax(200px,0.5fr));
     grid-gap:20px;
     position: relative;
+    column-count: 2 !important;
+  column-width: 200px !important;
+  column-gap: 20px !important;
+
 }
 .card:hover{
     transform: scale(0.9);
@@ -226,5 +241,13 @@ html{
     text-transform: capitalize;
     color: rgba(0, 0, 3, 0.8);
     transition: 0.5s;
+  }
+  input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
   }
   
