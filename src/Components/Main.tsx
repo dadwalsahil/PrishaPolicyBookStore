@@ -1,8 +1,9 @@
-import react, { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Card from "./Card.tsx";
 import { NavLink } from "react-router-dom";
 import Modal from "./Modal.tsx";
 import axios from "axios";
+import React from "react";
 
 interface NavbarProps {
   logo: string;

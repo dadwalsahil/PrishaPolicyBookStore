@@ -1,4 +1,5 @@
-import react, { useState } from "react";
+import { useState } from "react";
+import React from "react";
 import Modal from "./Modal.tsx";
 const Card = ({ book }) => {
   const [show, setShow] = useState(false);
